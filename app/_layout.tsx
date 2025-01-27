@@ -10,6 +10,7 @@ export default function RootLayout() {
       <Stack.Screen name="components/EnterOtp" options={{ title: 'Enter OTP' }} />
       <Stack.Screen name="components/DriverRegistration" options={{ title: 'Driver Registration' }} />
       <Stack.Screen name="+not-found" />
+      <Stack.Screen name="components/RideBooking" options={{title: 'RideBooking'}} />
      
     </Stack>
   );
