@@ -1,3 +1,4 @@
+import { Link } from 'expo-router';
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
@@ -8,12 +9,18 @@ const DriverSignUp: React.FC = () => {
       <Text style={styles.header}>Driver Sign Up</Text>
       <TextInput style={styles.input} placeholder="Email" keyboardType="email-address" />
       <TextInput style={styles.input} placeholder="Password" secureTextEntry />
-      <TouchableOpacity style={styles.signUpButton}>
-        <Text style={styles.buttonText}>Sign Up</Text>
-      </TouchableOpacity>
-      <Text style={styles.footerText}>
+      <Text style={styles.forgotPassword}>Forgot password?</Text>
+      {/* <TouchableOpacity style={styles.signUpButton}>
+        <Text style={styles.buttonText}>Sign In</Text>
+      </TouchableOpacity> */}
+            <Link href= '/components/RideBooking' asChild >
+                <TouchableOpacity style={styles.signUpButton}>
+                      <Text style={styles.buttonText}>Sign In</Text>
+                </TouchableOpacity>
+            </Link>
+      {/* <Text style={styles.footerText}>
         Already have an account? <Text style={styles.link}>Sign In</Text>
-      </Text>
+      </Text> */}
     </View>
   );
 };
@@ -26,6 +33,7 @@ const styles = StyleSheet.create({
   signUpButton: { backgroundColor: '#007BFF', padding: 15, borderRadius: 5, width: '100%', alignItems: 'center' },
   buttonText: { color: '#fff', fontWeight: 'bold' },
   footerText: { marginTop: 20, fontSize: 14 },
+  forgotPassword: { alignSelf: 'flex-end', marginBottom: 20, color: '#007BFF' },
   link: { color: '#007BFF', fontWeight: 'bold' },
 });
 
