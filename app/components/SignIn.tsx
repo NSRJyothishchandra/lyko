@@ -1,3 +1,4 @@
+import { Link } from 'expo-router';
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
@@ -9,9 +10,14 @@ const SignIn: React.FC = () => {
       <TextInput style={styles.input} placeholder="Email" keyboardType="email-address" />
       <TextInput style={styles.input} placeholder="Password" secureTextEntry />
       <Text style={styles.forgotPassword}>Forgot password?</Text>
-      <TouchableOpacity style={styles.signInButton}>
+      {/* <TouchableOpacity style={styles.signInButton}>
         <Text style={styles.buttonText}>Sign In</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
+      <Link href= '/components/RideBooking' asChild >
+          <TouchableOpacity style={styles.signInButton}>
+                <Text style={styles.buttonText}>Sign In</Text>
+          </TouchableOpacity>
+      </Link>
     </View>
   );
 };
